@@ -1,8 +1,8 @@
 const fs = require('fs');
 const crypto = require('crypto');
 
-const noCookiesFileName = '/var/lib/njs/cookies.txt';
-const badReputationIPs = loadFile('/var/lib/njs/ips.txt');
+const noCookiesFileName = '/etc/nginx/njs/cookies.txt';
+const badReputationIPs = loadFile('/etc/nginx/njs/ips.txt');
 const noCookieIPs = loadFile(noCookiesFileName);
 
 let response = '';

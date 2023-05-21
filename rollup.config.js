@@ -1,7 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 
 export default {
-    input: 'src/bot.ts',
+    input: 'src/visitor_bot.ts',
     output: {
         dir: 'dist',
     },
