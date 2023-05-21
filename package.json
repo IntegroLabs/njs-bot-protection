@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build:clean": "rm -rf dist && mkdir dist",
-        "build:rollup": "rollup -c",
+        "build:rollup": "rollup --config rollup.config.js && rollup --config rollup.secret-config.js",
         "build": "npm run build:clean && npm run build:rollup",
         "format": "prettier --write \"src/**/*.ts\" ",
         "lint": "eslint 'src/**/*.ts' --fix"
@@ -14,6 +14,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@rollup/plugin-multi-entry": "^6.0.0",
         "@rollup/plugin-typescript": "^8.2.1",
         "@types/node": "^15.0.1",
         "@typescript-eslint/eslint-plugin": "^4.22.0",
